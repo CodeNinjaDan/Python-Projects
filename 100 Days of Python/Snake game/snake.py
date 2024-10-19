@@ -4,7 +4,6 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
-from markdown_it.rules_block import heading
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
