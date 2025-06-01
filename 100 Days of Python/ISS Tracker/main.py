@@ -2,12 +2,17 @@ import requests
 from datetime import datetime
 import smtplib
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 MY_LAT = 0
 MY_LONG = 0
-MY_EMAIL = ""
-PASSWORD = ""
-RECEIVER_EMAIL = ""
+MY_EMAIL = os.getenv('MY_EMAIL')
+PASSWORD = os.getenv('PASSWORD')
+RECEIVER_EMAIL = os.getenv('RECEIVER_EMAIL')
+
 
 def is_iss_overhead():
     iss_response = requests.get(url="http://api.open-notify.org/iss-now.json")
